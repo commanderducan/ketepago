@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";  
+import Saldo from "./componentes/Saldo";
 
 function App() {   
 
@@ -52,11 +53,14 @@ function App() {
         {personas}
         <br/>
         {elementosHTML}
+
+        <h1>test</h1>
+        <Saldo/>
       </>
   )
 }
 
-export default App;G
+export default App;
 
 
 
