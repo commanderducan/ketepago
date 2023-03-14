@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";  
-import Saldo from "./componentes/Saldo";
+import Saldo from "./componentes/Saldo/Saldo";
+import Aportacion from "./componentes/Aportacion/Aportacion";
+import "./App.css";
 
 function App() {   
 
@@ -19,10 +21,10 @@ function App() {
   }
 
   useEffect (
-    ()=>{
-      setParte(cantidad/personas)
-    },
-    [cantidad, personas]
+      ()=>{
+        setParte(cantidad/personas)
+      },
+      [cantidad, personas]
   )
 
   useEffect (
@@ -55,7 +57,12 @@ function App() {
         {elementosHTML}
 
         <h1>test</h1>
-        <Saldo/>
+        <Saldo saldo={-1}/>
+        <br/>
+        <Saldo saldo={0}/> 
+        <br/>
+        <Saldo saldo={1}/>
+        <Aportacion parte={parte}/>
       </>
   )
 }
